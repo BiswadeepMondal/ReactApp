@@ -1,0 +1,77 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="com.awesomeproject">
+<!-- Required to allow the app to send events and user profile information -->
+<uses-permission android:name="android.permission.INTERNET"/>
+<!-- Recommended so that CleverTap knows when to attempt a network call -->
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+      android:name=".MainApplication"
+      android:label="@string/app_name"
+      android:icon="@mipmap/ic_launcher"
+      android:roundIcon="@mipmap/ic_launcher_round"
+      android:allowBackup="false"
+      android:theme="@style/AppTheme">
+      
+      <activity
+        android:name=".MainActivity"
+        android:label="@string/app_name"
+        android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+        android:launchMode="singleTask"
+        android:windowSoftInputMode="adjustResize"
+        android:exported="true">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+      </activity>
+        <meta-data
+            android:name="CLEVERTAP_NOTIFICATION_ICON"
+            android:value="icon2img"/>
+      <service android:name=".MyFcmMessageListenerService"
+             android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+         <!-- <meta-data
+      android:name="com.google.firebase.messaging.default_notification_icon"
+      android:resource="@drawable/icon2img" /> -->
+     
+           
+  <!-- <meta-data
+            android:name="CLEVERTAP_XIAOMI_APP_KEY"
+            android:value="@string/xiaomi_app_key" />
+
+        <meta-data
+            android:name="CLEVERTAP_XIAOMI_APP_ID"
+            android:value="@string/xiaomi_app_id" /> -->
+        
+<!--            <meta-data-->
+<!--            android:name="CLEVERTAP_ACCOUNT_ID"-->
+<!--            android:value="TEST-4W5-9RR-646Z"/>-->
+<!--        <meta-data-->
+<!--            android:name="CLEVERTAP_TOKEN"-->
+<!--            android:value="TEST-22c-504" />-->
+
+        <!-- <meta-data
+            android:name="CLEVERTAP_ACCOUNT_ID"
+            android:value="TEST-6K9-99Z-646Z"/>
+        <meta-data
+            android:name="CLEVERTAP_TOKEN"
+            android:value="TEST-1cc-c36" /> -->
+
+        <meta-data
+            android:name="CLEVERTAP_USE_GOOGLE_AD_ID"
+            android:value="0" />
+        <meta-data
+            android:name="CLEVERTAP_REGION"
+           android:value="eu1" />
+        <meta-data
+            android:name="CLEVERTAP_BACKGROUND_SYNC"
+            android:value="1" />
+
+       
+    </application>
+</manifest>
