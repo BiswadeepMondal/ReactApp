@@ -91,6 +91,10 @@ public void onNewToken(String token1)
             //    Log.d("CT data", "CT json: " + new Gson().toJson(message));   // to print payload
 
             //     Log.d("EXTRAS", "EXTRAS: "+extras);
+<<<<<<< HEAD
+=======
+        extras.putString("app_source", "clevertap_notification_tray");
+>>>>>>> f555993 (final)
          new CTFcmMessageHandler().createNotification(getApplicationContext(), message);
 
          // CleverTapAPI.getDefaultInstance(this).pushNotificationViewedEvent(extras);
