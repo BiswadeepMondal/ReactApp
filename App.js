@@ -94,11 +94,11 @@ const App: () => Node = () => {
       <View style={styles.container}>
         <Button onPress={() => {
           
-<<<<<<< HEAD
+
           CleverTap.recordEvent('SS_feedpage_launch')
-=======
+
           CleverTap.recordEvent('keytest')
->>>>>>> f555993 (final)
+
           console.log("test event");
         //   CleverTap.getAllDisplayUnits((err, res) => {
         //     console.log("inside display units");
